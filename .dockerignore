@@ -1,0 +1,12 @@
+# Keep the build context to the files the image actually serves.
+.git
+.gitattributes
+.gitignore
+.claude
+deployment
+scripts
+Dockerfile
+.dockerignore
+docker-compose.yml
+*.md
+.DS_Store

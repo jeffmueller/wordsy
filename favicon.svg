@@ -1,0 +1,27 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1024" height="1024" fill="#121213"></rect>
+
+  <!-- Grid container -->
+  <g transform="translate(112,112)">
+    
+    <!-- Tile settings -->
+    <!-- tile size: 240, gap: 32 -->
+    
+    <!-- Row 1 -->
+    <rect x="0" y="0" width="240" height="240" rx="40" fill="#538d4e"></rect>
+    <rect x="272" y="0" width="240" height="240" rx="40" fill="#b59f3b"></rect>
+    <rect x="544" y="0" width="240" height="240" rx="40" fill="#3a3a3c"></rect>
+
+    <!-- Row 2 -->
+    <rect x="0" y="272" width="240" height="240" rx="40" fill="#3a3a3c"></rect>
+    <rect x="272" y="272" width="240" height="240" rx="40" fill="#538d4e"></rect>
+    <rect x="544" y="272" width="240" height="240" rx="40" fill="#b59f3b"></rect>
+
+    <!-- Row 3 -->
+    <rect x="0" y="544" width="240" height="240" rx="40" fill="#b59f3b"></rect>
+    <rect x="272" y="544" width="240" height="240" rx="40" fill="#3a3a3c"></rect>
+    <rect x="544" y="544" width="240" height="240" rx="40" fill="#538d4e"></rect>
+
+  </g>
+</svg>

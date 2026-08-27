@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wordsy</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="game">
+    <!-- Header -->
+    <header>
+      <button id="help-btn" class="icon-btn" aria-label="How to play">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+          <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
+          <text x="12" y="17" text-anchor="middle" fill="currentColor" font-size="14" font-weight="bold">?</text>
+        </svg>
+      </button>
+      <h1>Wordsy</h1>
+      <button id="settings-btn" class="icon-btn" aria-label="Settings">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+          <path fill="currentColor" d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58a.49.49 0 00.12-.61l-1.92-3.32a.49.49 0 00-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54a.484.484 0 00-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96a.49.49 0 00-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.07.62-.07.94s.02.64.07.94l-2.03 1.58a.49.49 0 00-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6A3.6 3.6 0 1115.6 12 3.611 3.611 0 0112 15.6z"/>
+        </svg>
+      </button>
+    </header>
+
+    <!-- Toast container -->
+    <div id="toast-container"></div>
+
+    <!-- Game board -->
+    <div id="board-container">
+      <div id="board"></div>
+    </div>
+
+    <!-- Keyboard -->
+    <div id="keyboard"></div>
+  </div>
+
+  <!-- Help Modal -->
+  <div id="help-modal" class="modal-overlay hidden">
+    <div class="modal">
+      <button class="modal-close" aria-label="Close">&times;</button>
+      <h2>How To Play</h2>
+      <p>Guess the word in 6 tries.</p>
+      <ul>
+        <li>Each guess must be a valid 5-letter word.</li>
+        <li>The color of the tiles will change to show how close your guess was to the word.</li>
+      </ul>
+      <div class="examples">
+        <p><strong>Examples</strong></p>
+        <div class="example-row">
+          <div class="example-tile correct">W</div>
+          <div class="example-tile">E</div>
+          <div class="example-tile">A</div>
+          <div class="example-tile">R</div>
+          <div class="example-tile">Y</div>
+        </div>
+        <p><strong>W</strong> is in the word and in the correct spot.</p>
+        <div class="example-row">
+          <div class="example-tile">P</div>
+          <div class="example-tile present">I</div>
+          <div class="example-tile">L</div>
+          <div class="example-tile">L</div>
+          <div class="example-tile">S</div>
+        </div>
+        <p><strong>I</strong> is in the word but in the wrong spot.</p>
+        <div class="example-row">
+          <div class="example-tile">V</div>
+          <div class="example-tile">A</div>
+          <div class="example-tile">G</div>
+          <div class="example-tile absent">U</div>
+          <div class="example-tile">E</div>
+        </div>
+        <p><strong>U</strong> is not in the word in any spot.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Settings Modal -->
+  <div id="settings-modal" class="modal-overlay hidden">
+    <div class="modal">
+      <button class="modal-close" aria-label="Close">&times;</button>
+      <h2>Settings</h2>
+      <div class="setting-row">
+        <div>
+          <span class="setting-label">Hard Mode</span>
+          <span class="setting-desc">Any revealed hints must be used in subsequent guesses</span>
+        </div>
+        <label class="toggle">
+          <input type="checkbox" id="hard-mode-toggle">
+          <span class="toggle-slider"></span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stats Modal -->
+  <div id="stats-modal" class="modal-overlay hidden">
+    <div class="modal">
+      <button class="modal-close" aria-label="Close">&times;</button>
+      <h2>Statistics</h2>
+      <div id="stats-summary"></div>
+      <h3>Guess Distribution</h3>
+      <div id="guess-distribution"></div>
+      <button id="share-btn" class="share-btn hidden">Share 📋</button>
+    </div>
+  </div>
+
+  <script src="js/words.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/ui.js"></script>
+</body>
+</html>

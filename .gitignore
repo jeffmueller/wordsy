@@ -1,0 +1,12 @@
+# Local Claude Code settings
+.claude/settings.local.json
+
+# Personal deployment config — copy .env.deploy.example and edit
+deployment/.env.deploy
+
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# Node
+node_modules/

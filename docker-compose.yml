@@ -1,0 +1,10 @@
+services:
+  wordsy:
+    build: .
+    image: wordsy:latest
+    container_name: wordsy
+    # Host port 8080 -> nginx port 80. Change the left number if 8080 is
+    # already taken on your NAS or Pi.
+    ports:
+      - "8080:80"
+    restart: unless-stopped
